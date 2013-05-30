@@ -1,0 +1,38 @@
+#!/usr/bin/env node
+
+var arg, colors, precompile, program;
+
+/**
+ * Node modules
+ */
+program = require('commander');
+precompile = require('../src/precompile').precompile;
+colors = require('../src/colors').colors;
+
+/**
+ * Command line options
+ */
+program
+  .version('0.0.1')
+  .option('-s, --source [dir]', 'Source directory')
+  .option('-o, --output [filename]', 'Output file')
+  .parse(process.argv);
+
+// Check if the options hold
+if (!program.source) {
+  console.log(colors[1] + '    error:    ' + colors[0] + 'Needs source directory.');
+  process.exit(1);
+}
+
+if (!program.output) {
+  console.log(colors[1] + '    error:    ' + colors[0] + 'Needs output filename.');
+  process.exit(1);
+}
+
+// Source dir and output file
+arg = {
+  src: process.cwd() + '/' + program.source,
+  output: process.cwd() + '/' + program.output
+};
+
+precompile(arg);
