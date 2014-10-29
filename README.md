@@ -13,16 +13,10 @@ Easy way to precompile Handlebars templates from the command line.
 
 ## Versions
 
-* Ember.js - 1.0.0-rc.4
-* Handlebars - 1.0.0-rc.4
-* Node.js - >= 10.5
-
-## TODO
-
-* Tests
-* Improve performance
+* Ember.js - 1.8.0
+* Handlebars - 1.3.0
 
 ## This package borrows from:
 
-https://gist.github.com/zilkey/2013669
-https://github.com/rpflorence/ember-tools
+* https://gist.github.com/zilkey/2013669
+* https://github.com/rpflorence/ember-tools
