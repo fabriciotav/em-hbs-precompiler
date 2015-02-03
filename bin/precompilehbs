@@ -8,7 +8,7 @@ var fs = require('fs'),
 var colors = ['\u001b[0m', '\u001b[31m', '\u001b[32m', '\u001b[33m']; // reset, red, green, yellow
 
 program
-  .version('0.1.0')
+  .version('0.2.1')
   .option('-s, --source [dir]', 'Source directory')
   .option('-o, --output [filename]', 'Output file')
   .parse(process.argv);
@@ -50,7 +50,7 @@ function compile() {
 
   var n = templates.length;
   for (var i = 0; i < n; i++) {
-    var input = compiler.precompile(templates[i].content).toString();
+    var input = compiler.precompile(templates[i].content, false).toString();
     var output = "Ember.TEMPLATES['" + templates[i].name + "'] = Ember.Handlebars.template(" + input + ");";
     templatesStrings.push(output);
   }
