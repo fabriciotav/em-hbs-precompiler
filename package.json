@@ -4,9 +4,9 @@
     "bin": {
         "precompilehbs": "./bin/precompilehbs"
     },
-    "version": "0.2.1",
+    "version": "0.3.0",
     "author": "Fabrício Tavares <fabricio@fabriciotav.org>",
-    "descripiton": "Precompile Ember.js Handlebars templates from the command line.",
+    "descripiton": "Precompile Ember.js HTMLbars templates from the command line.",
     "repository": {
         "type": "git",
         "url": "https://github.com/fabriciotav/em-hbs-precompiler.git"
@@ -14,11 +14,11 @@
     "keywords": [
         "ember",
         "handlebars",
+        "htmlbars",
         "precompiler"
     ],
     "dependencies": {
         "commander": "2.5.0",
-        "ember-template-compiler": "1.9.0-alpha",
         "walk": "2.3.4"
     },
     "license": "MIT",
