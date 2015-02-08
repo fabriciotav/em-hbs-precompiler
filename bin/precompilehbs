@@ -3,12 +3,12 @@
 var fs = require('fs'),
     walk = require('walk'),
     program = require('commander'),
-    compiler = require('ember-template-compiler');
+    compiler = require('../lib/ember/ember-template-compiler');
 
 var colors = ['\u001b[0m', '\u001b[31m', '\u001b[32m', '\u001b[33m']; // reset, red, green, yellow
 
 program
-  .version('0.2.1')
+  .version('0.3.0')
   .option('-s, --source [dir]', 'Source directory')
   .option('-o, --output [filename]', 'Output file')
   .parse(process.argv);
@@ -51,7 +51,7 @@ function compile() {
   var n = templates.length;
   for (var i = 0; i < n; i++) {
     var input = compiler.precompile(templates[i].content, false).toString();
-    var output = "Ember.TEMPLATES['" + templates[i].name + "'] = Ember.Handlebars.template(" + input + ");";
+    var output = "Ember.TEMPLATES['" + templates[i].name + "'] = Ember.HTMLBars.template(" + input + ");";
     templatesStrings.push(output);
   }
 
