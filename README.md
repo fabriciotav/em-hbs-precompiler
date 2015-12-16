@@ -12,9 +12,13 @@ Easy way to precompile HTMLbars templates from the command line.
 
 ## Current supported Ember version
 
-1.13.11
+2.2.0
 
 ## Changelog
+
+### ~2.2.0
+
+* Ember.js - 2.2.0
 
 ### ~0.6.0
 

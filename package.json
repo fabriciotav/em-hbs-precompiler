@@ -4,7 +4,7 @@
     "bin": {
         "precompilehbs": "./bin/precompilehbs"
     },
-    "version": "0.6.0",
+    "version": "2.2.0",
     "author": "Fabrício Tavares <fabricio@fabriciotav.org>",
     "descripiton": "Precompile Ember.js HTMLbars templates from the command line.",
     "repository": {
